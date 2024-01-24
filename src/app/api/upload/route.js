@@ -10,8 +10,8 @@ export async function POST(req) {
     const s3Client = new S3Client({
       region: 'eu-north-1',
       credentials: {
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        accessKeyId: process.env.AWSACCESS_KEY_ID,
+        secretAccessKey: process.env.AWSSECRET_ACCESS_KEY,
       },
     });
 
@@ -33,15 +33,11 @@ export async function POST(req) {
       Body: buffer,
     }));
 
-    try {
+
     const link = 'https://'+bucket+'.s3.amazonaws.com/'+newFileName;
       console.log('Ссылка на загруженный файл:', link);
     return Response.json(link);
   }
-catch (error) {
-  console.error('Ошибка обработки запроса:', error);
-  return Response.error({ message: 'Something went wrong' }, 500);
+  
+  return Response.json(true);
 }
-return Response.json(true);
-}
-} 
