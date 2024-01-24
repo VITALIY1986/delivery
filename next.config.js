@@ -8,7 +8,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'iasi-foods-ordering.s3.amazonaws.com',
+        hostname: 'iasi-food-ordering.s3.amazonaws.com',
       },
     ]
   }
