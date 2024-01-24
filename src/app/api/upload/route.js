@@ -33,9 +33,15 @@ export async function POST(req) {
       Body: buffer,
     }));
 
-
+    try {
     const link = 'https://'+bucket+'.s3.amazonaws.com/'+newFileName;
+      console.log('Ссылка на загруженный файл:', link);
     return Response.json(link);
   }
-  return Response.json(true);
+catch (error) {
+  console.error('Ошибка обработки запроса:', error);
+  return Response.error({ message: 'Something went wrong' }, 500);
 }
+return Response.json(true);
+}
+} 
