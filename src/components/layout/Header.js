@@ -16,7 +16,7 @@ function AuthLinks({status, userName}) {
         <button
           onClick={() => signOut()}
           className="bg-primary rounded-full text-white px-8 py-2">
-          Logout
+          Log
         </button>
       </>
     );
