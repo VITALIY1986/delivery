@@ -6,15 +6,11 @@ export default function AddToCartButton({
   if (!hasSizesOrExtras) {
     return (
       <div className="flying-button-parent mt-4">
-        <FlyingButton
-          targetTop={'5%'}
-          targetLeft={'5%'}
-          src={image}
-            animationDuration={5}>
-          <div onClick={onClick}>
+        
+          <div className="bg-red-500 p-3 b-ra rounded-xl" onClick={onClick}>
             Add to cart ${basePrice}
           </div>
-        </FlyingButton>
+        
       </div>
     );
   }

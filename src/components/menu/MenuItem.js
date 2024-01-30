@@ -107,9 +107,9 @@ export default function MenuItem(menuItem) {
               )}
               <FlyingButton
                 targetTop={'5%'}
-                targetLeft={'5%'}
+                targetLeft={'95%'}
                 src={image}
-                animationDuration={5}>
+               width={'1px'}>
                 <div className="primary sticky bottom-2"
                      onClick={handleAddToCartButtonClick}>
                   Add to cart ${selectedPrice}
