@@ -26,7 +26,7 @@ export default function MenuItem(menuItem) {
     }
     addToCart(menuItem, selectedSize, selectedExtras);
     await new Promise(resolve => setTimeout(resolve, 1000));
-    console.log('hiding popup');
+   
     setShowPopup(false);
   }
   function handleExtraThingClick(ev, extraThing) {
@@ -105,15 +105,12 @@ export default function MenuItem(menuItem) {
                   ))}
                 </div>
               )}
-              <FlyingButton
-                targetTop={'5%'}
-                targetLeft={'95%'}
-                src={image}>
+             
                 <div className="primary sticky bottom-2"
                      onClick={handleAddToCartButtonClick}>
                   Add to cart ${selectedPrice}
                 </div>
-              </FlyingButton>
+            
               <button
                 className="mt-2"
                 onClick={() => setShowPopup(false)}>
