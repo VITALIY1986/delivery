@@ -18,7 +18,7 @@ export default function MenuItem(menuItem) {
   const {addToCart} = useContext(CartContext);
 
   async function handleAddToCartButtonClick() {
-    console.log('add to cart');
+ 
     const hasOptions = sizes.length > 0 || extraIngredientPrices.length > 0;
     if (hasOptions && !showPopup) {
       setShowPopup(true);
