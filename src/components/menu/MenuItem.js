@@ -105,12 +105,16 @@ export default function MenuItem(menuItem) {
                   ))}
                 </div>
               )}
-             
+              <FlyingButton
+                targetTop={'5%'}
+                targetLeft={'5%'}
+                src={image}
+                animationDuration={5}>
                 <div className="primary sticky bottom-2"
                      onClick={handleAddToCartButtonClick}>
                   Add to cart ${selectedPrice}
                 </div>
-            
+              </FlyingButton>
               <button
                 className="mt-2"
                 onClick={() => setShowPopup(false)}>

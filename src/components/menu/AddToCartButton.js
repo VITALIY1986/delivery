@@ -8,8 +8,9 @@ export default function AddToCartButton({
       <div className="flying-button-parent mt-4">
         <FlyingButton
           targetTop={'5%'}
-          targetLeft={'95%'}
-          src={image}>
+          targetLeft={'5%'}
+          src={image}
+            animationDuration={5}>
           <div onClick={onClick}>
             Add to cart ${basePrice}
           </div>
